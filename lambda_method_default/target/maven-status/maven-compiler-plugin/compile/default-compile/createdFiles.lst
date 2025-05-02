@@ -1,0 +1,5 @@
+com/source/Main.class
+com/source/model/Book.class
+com/source/model/EBook.class
+com/source/service/BookManager.class
+com/source/service/Library.class
