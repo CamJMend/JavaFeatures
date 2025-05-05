@@ -96,6 +96,11 @@
 
 ## Compilación y Ejecución
 
+Entrar a la carpeta correcta:
+```
+cd lambda_method_default
+```
+
 Para compilar el proyecto:
 ```
 mvn clean compile
