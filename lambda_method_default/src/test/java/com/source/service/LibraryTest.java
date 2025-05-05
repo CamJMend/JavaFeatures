@@ -13,12 +13,12 @@ public class LibraryTest {
     @BeforeEach
     void setUp() {
         library = new Library();
-        // Add some test books
-        library.addBook(new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925));
-        library.addBook(new Book("To Kill a Mockingbird", "Harper Lee", 1960));
-        library.addBook(new Book("1984", "George Orwell", 1949));
-        library.addBook(new Book("Animal Farm", "George Orwell", 1945));
-        library.addBook(new EBook("Digital Fortress", "Dan Brown", 2000, 2.5, "EPUB"));
+        // Los nuevos libros solicitados
+        library.addBook(new Book("Turtles All the Way Down", "John Green", 2017));
+        library.addBook(new Book("Sapiens", "Yuval Noah", 2011));
+        library.addBook(new Book("The Land of Stories", "Chris Colfer", 2015));
+        library.addBook(new Book("The Midnight Library", "Matt Haig", 2020));
+        library.addBook(new EBook("They Both Die at the End", "Adam Silvera", 2017, 3.2, "EPUB"));
     }
     
     @Test
@@ -28,11 +28,11 @@ public class LibraryTest {
     
     @Test
     void testFindBooksByAuthor() {
-        List<Book> orwellBooks = library.findBooksByAuthor("George Orwell");
-        assertEquals(2, orwellBooks.size(), "Should find 2 books by George Orwell");
+        List<Book> greenBooks = library.findBooksByAuthor("John Green");
+        assertEquals(1, greenBooks.size(), "Should find 1 book by John Green");
         
-        List<Book> brownBooks = library.findBooksByAuthor("Dan Brown");
-        assertEquals(1, brownBooks.size(), "Should find 1 book by Dan Brown");
+        List<Book> silveraBooks = library.findBooksByAuthor("Adam Silvera");
+        assertEquals(1, silveraBooks.size(), "Should find 1 book by Adam Silvera");
         
         List<Book> nonExistentAuthorBooks = library.findBooksByAuthor("Non Existent Author");
         assertEquals(0, nonExistentAuthorBooks.size(), "Should find 0 books by non-existent author");
@@ -41,33 +41,33 @@ public class LibraryTest {
     @Test
     void testSortBooksByTitle() {
         List<Book> sortedBooks = library.sortBooksByTitle();
-        assertEquals("1984", sortedBooks.get(0).getTitle(), "First book should be '1984'");
-        assertEquals("To Kill a Mockingbird", sortedBooks.get(4).getTitle(), "Last book should be 'To Kill a Mockingbird'");
+        assertEquals("Sapiens", sortedBooks.get(0).getTitle(), "First book should be 'Sapiens'");
+        assertEquals("Turtles All the Way Down", sortedBooks.get(4).getTitle(), "Last book should be 'Turtles All the Way Down'");
     }
     
     @Test
     void testFindBooksPublishedBefore() {
-        List<Book> oldBooks = library.findBooksPublishedBefore(1950);
-        assertEquals(3, oldBooks.size(), "Should find 3 books published before 1950");
+        List<Book> oldBooks = library.findBooksPublishedBefore(2015);
+        assertEquals(1, oldBooks.size(), "Should find 1 book published before 2015");
     }
     
     @Test
     void testFindBooksByTitleContaining() {
         List<Book> booksWithThe = library.findBooksByTitleContaining("The");
-        assertEquals(2, booksWithThe.size(), "Should find 2 books with 'The' in the title");
+        assertEquals(4, booksWithThe.size(), "Should find 4 books with 'The' in the title");
     }
     
     @Test
     void testSortBooksByYearAscending() {
         List<Book> sortedBooks = library.sortBooksByYearAscending();
-        assertEquals(1925, sortedBooks.get(0).getYear(), "First book should be from 1925");
-        assertEquals(2000, sortedBooks.get(4).getYear(), "Last book should be from 2000");
+        assertEquals(2011, sortedBooks.get(0).getYear(), "First book should be from 2011");
+        assertEquals(2020, sortedBooks.get(4).getYear(), "Last book should be from 2020");
     }
     
     @Test
     void testSortBooksByYearDescending() {
         List<Book> sortedBooks = library.sortBooksByYearDescending();
-        assertEquals(2000, sortedBooks.get(0).getYear(), "First book should be from 2000");
-        assertEquals(1925, sortedBooks.get(4).getYear(), "Last book should be from 1925");
+        assertEquals(2020, sortedBooks.get(0).getYear(), "First book should be from 2020");
+        assertEquals(2011, sortedBooks.get(4).getYear(), "Last book should be from 2011");
     }
 }

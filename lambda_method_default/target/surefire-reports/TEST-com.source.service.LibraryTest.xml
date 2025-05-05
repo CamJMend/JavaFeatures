@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.source.service.LibraryTest" time="0.059" tests="7" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.source.service.LibraryTest" time="0.051" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="23"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="MX"/>
     <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/cam/Desktop/JavaFeatures/lambda_method_default/target/surefire/surefirebooter13685558745436071298.jar /Users/cam/Desktop/JavaFeatures/lambda_method_default/target/surefire 2025-05-02T10-05-39_448-jvmRun1 surefire14766497118399575838tmp surefire_011179015278705549359tmp"/>
+    <property name="sun.java.command" value="/Users/cam/Desktop/JavaFeatures/lambda_method_default/target/surefire/surefirebooter2821416497198181614.jar /Users/cam/Desktop/JavaFeatures/lambda_method_default/target/surefire 2025-05-04T20-01-13_752-jvmRun1 surefire15021678684906238185tmp surefire_07946021170959654536tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/cam/Desktop/JavaFeatures/lambda_method_default/target/test-classes:/Users/cam/Desktop/JavaFeatures/lambda_method_default/target/classes:/Users/cam/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/Users/cam/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/cam/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/Users/cam/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/cam/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/Users/cam/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/cam/Desktop/JavaFeatures/lambda_method_default/target/surefire/surefirebooter13685558745436071298.jar"/>
+    <property name="surefire.real.class.path" value="/Users/cam/Desktop/JavaFeatures/lambda_method_default/target/surefire/surefirebooter2821416497198181614.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="23.0.2"/>
@@ -58,15 +58,11 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="67.0"/>
   </properties>
-  <testcase name="testGetBooks" classname="com.source.service.LibraryTest" time="0.035"/>
-  <testcase name="testSortBooksByYearAscending" classname="com.source.service.LibraryTest" time="0.001"/>
-  <testcase name="testFindBooksByTitleContaining" classname="com.source.service.LibraryTest" time="0.009">
-    <failure message="Should find 2 books with &apos;The&apos; in the title ==&gt; expected: &lt;2&gt; but was: &lt;1&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Should find 2 books with 'The' in the title ==> expected: <2> but was: <1>
-	at com.source.service.LibraryTest.testFindBooksByTitleContaining(LibraryTest.java:57)
-]]></failure>
-  </testcase>
-  <testcase name="testFindBooksPublishedBefore" classname="com.source.service.LibraryTest" time="0.001"/>
-  <testcase name="testSortBooksByTitle" classname="com.source.service.LibraryTest" time="0.001"/>
+  <testcase name="testGetBooks" classname="com.source.service.LibraryTest" time="0.031"/>
+  <testcase name="testSortBooksByYearAscending" classname="com.source.service.LibraryTest" time="0.002"/>
+  <testcase name="testFindBooksByTitleContaining" classname="com.source.service.LibraryTest" time="0.002"/>
+  <testcase name="testFindBooksPublishedBefore" classname="com.source.service.LibraryTest" time="0.002"/>
+  <testcase name="testSortBooksByTitle" classname="com.source.service.LibraryTest" time="0.002"/>
   <testcase name="testFindBooksByAuthor" classname="com.source.service.LibraryTest" time="0.001"/>
   <testcase name="testSortBooksByYearDescending" classname="com.source.service.LibraryTest" time="0.001"/>
 </testsuite>

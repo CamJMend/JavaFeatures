@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.source.service.LibraryTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.059 s <<< FAILURE! - in com.source.service.LibraryTest
-testFindBooksByTitleContaining  Time elapsed: 0.009 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Should find 2 books with 'The' in the title ==> expected: <2> but was: <1>
-	at com.source.service.LibraryTest.testFindBooksByTitleContaining(LibraryTest.java:57)
-
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s - in com.source.service.LibraryTest

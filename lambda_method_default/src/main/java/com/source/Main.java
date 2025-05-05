@@ -10,19 +10,20 @@ public class Main {
     public static void main(String[] args) {
         Library library = new Library();
         
-        library.addBook(new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925));
-        library.addBook(new Book("To Kill a Mockingbird", "Harper Lee", 1960));
-        library.addBook(new Book("1984", "George Orwell", 1949));
-        library.addBook(new Book("Animal Farm", "George Orwell", 1945));
-        library.addBook(new Book("The Catcher in the Rye", "J.D. Salinger", 1951));
+        // Libros actualizados según la lista proporcionada
+        library.addBook(new Book("Paper Towns", "John Green", 2008));
+        library.addBook(new Book("Five Feet Apart", "Mikki Daughtry", 2018));
+        library.addBook(new Book("Turtles All the Way Down", "John Green", 2017));
+        library.addBook(new Book("Sapiens", "Yuval Noah", 2011));
+        library.addBook(new Book("The Land of Stories", "Chris Colfer", 2015));
         
-        library.addBook(new EBook("Digital Fortress", "Dan Brown", 2000, 2.5, "EPUB"));
-        library.addBook(new EBook("Steve Jobs", "Walter Isaacson", 2011, 5.7, "PDF"));
+        library.addBook(new EBook("The Midnight Library", "Matt Haig", 2020, 3.2, "EPUB"));
+        library.addBook(new EBook("They Both Die at the End", "Adam Silvera", 2017, 2.8, "PDF"));
         
         System.out.println("All books in the library:");
         library.printAllBooks();
         
-        String authorToFind = "George Orwell";
+        String authorToFind = "John Green";
         System.out.println("\nBooks by " + authorToFind + ":");
         List<Book> booksByAuthor = library.findBooksByAuthor(authorToFind);
         booksByAuthor.forEach(System.out::println);
@@ -44,7 +45,7 @@ public class Main {
         sortedByYearDesc.forEach(System.out::println);
         
         // 3. Find books published before a specific year
-        int yearFilter = 1950;
+        int yearFilter = 2015;
         System.out.println("\nBooks published before " + yearFilter + ":");
         List<Book> booksBeforeYear = library.findBooksPublishedBefore(yearFilter);
         booksBeforeYear.forEach(System.out::println);
