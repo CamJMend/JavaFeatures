@@ -116,3 +116,13 @@ mvn test
 - Ordenamiento de libros por año (ascendente y descendente)
 - Filtrado de libros por año de publicación
 - Filtrado de libros por texto en el título
+
+
+## Evidencia de funcionamiento:
+
+### Main
+![Main Funcionando pt1](./Evidencia1.png)
+![Main Funcionando pt2](./Evidencia2.png)
+
+### Tests
+![Tests Funcionando](./Evidencia3.png)
